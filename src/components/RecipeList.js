@@ -23,11 +23,11 @@ const RecipeList = (props) => {
                         <img src = {recipe.image}></img>
                         {recipe.name}
                         |
-                        <Link to={'/' + recipe._id}>
+                        <Link to={'/recipe/' + recipe._id}>
                             Recipe Details
                         </Link>
                         |
-                        <Link to={'/edit/' + recipe._id}>
+                        <Link to={'/recipe/edit/' + recipe._id}>
                             Edit Recipe
                         </Link>
                         |

@@ -10,7 +10,7 @@ export default () => {
     const createRecipe = recipe => {
         axios.post('http://localhost:8000/api/recipe/new', recipe)
             .then(res => {
-                history.push('/');
+                history.push('/home');
             })
             .catch(err => {
                 console.log(err.response.data.errors)
@@ -26,7 +26,7 @@ export default () => {
     
     return (
         <div>
-            <Link to = '/'>Home</Link>
+            <Link to = '/home'>Home</Link>
             <Form
                 onSubmitProp={createRecipe}
                 initialName=''

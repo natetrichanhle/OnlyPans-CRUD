@@ -23,7 +23,7 @@ const Update = (props) => {
         axios.put('http://localhost:8000/api/recipe/edit/' + id, recipe)
             .then(res => {
                 console.log(res);
-                history.push('/');
+                history.push('/home');
             })
             .catch(err => {
                 const errorResponse = err.response.data.errors; // Get the errors from err.response.data
@@ -38,7 +38,7 @@ const Update = (props) => {
 
     return (
         <div>
-            <Link to = '/'>Home</Link>
+            <Link to = '/home'>Home</Link>
             <h1>Edit a Recipe</h1>
             {loaded && (
                 <>

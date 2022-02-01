@@ -15,16 +15,15 @@ const Detail = (props) => {
 
     return (
         <div>
-            <h1>Recipe Details</h1>
+            <h1>{recipe.name}</h1>
             <img src = {recipe.image}></img>
-            <p>Recipe Name: {recipe.name}</p>
             <p>Type of Cuisine: {recipe.cuisine}</p>
             <p>Description: {recipe.description}</p>
             <p>Ingredients: {recipe.ingredients}</p>
             <p>Instructions: {recipe.instructions}</p>
             <p>Image URL: {recipe.image}</p>
             <p>Allergies (optional): {recipe.allergies}</p>
-            <Link to={`/edit/${recipe._id}`}>
+            <Link to={`/recipe/edit/${recipe._id}`}>
                 Edit Recipe
             </Link>
         </div>
